@@ -3,7 +3,12 @@ Game Controls-
 
 ## Right click hold and drag rotates the whole cube. Left Click hold drag rotates a given side.
 
-## Project Documentation link - https://docs.google.com/document/d/1B4ebM5PWHEbm7YoB_6DQJprbdC7cA_TiwG9fhw-2pwY/edit?usp=sharing
+### Project Documentation link - https://docs.google.com/document/d/1B4ebM5PWHEbm7YoB_6DQJprbdC7cA_TiwG9fhw-2pwY/edit?usp=sharing
+
+Limitations-
+
+I made the project for a 3x3x3 cube. 
+I did not know how to make a Rubick’s cube, and since I wasn’t able to find many resources on the internet to make a custom rubicks cube of custom dimensions, and due to time constraints, I made the cube for a 3x3x3 cube.
 
 Working Principle-
 The rubick’s cube is made up of 27 smaller cubes( referred to as little cubes in the code). Each of these 27 cubes is an instance of a prefab.
