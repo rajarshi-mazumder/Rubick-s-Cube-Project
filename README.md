@@ -1,5 +1,6 @@
 
 Game Controls-
+
 ##Right click hold and drag rotates the whole cube. Left Click hold drag rotates a given side.
 
 Working Principle-
