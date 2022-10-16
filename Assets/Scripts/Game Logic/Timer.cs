@@ -30,10 +30,20 @@ public class Timer : MonoBehaviour
 
     public string ConvertAndDisplayTime()
     {
+        var hours = timeElapsed / 3600;
+        var minutes = (timeElapsed % 3600) / 60;
+        var seconds = timeElapsed % 60;
+
         if (timeElapsed <= 60)
             return Mathf.Round(timeElapsed).ToString() + " s";
         else if (timeElapsed > 60)
-            return Mathf.Round(timeElapsed / 60).ToString() + " mins";
+        {
+            return Mathf.Round( minutes).ToString() + " min " + Mathf.Round(seconds).ToString()+" s";
+        }
+        else if(timeElapsed>3600)
+        {
+            return Mathf.Round(hours).ToString()+ " hr "+ Mathf.Round(minutes).ToString() + "min" + Mathf.Round(seconds).ToString() + " s";
+        }
         else return "";
     }
     public void StartTimer()
