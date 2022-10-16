@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
         MaxShufflesSlider.value = 30;
 
-        if (!PlayerPrefs.HasKey("def_saved"))
+        if (!PlayerPrefs.HasKey("has_saved"))
             LoadGameBtn.SetActive(false);
         mainCamera.GetComponent<CinemachineBrain>().enabled = false;
 

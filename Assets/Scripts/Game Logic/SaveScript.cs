@@ -54,6 +54,7 @@ public class SaveScript: MonoBehaviour
             cubeStateHandler.cur_state = CubeManager.States.Solved;
         }
         else cubeStateHandler.SetState(CubeManager.States.Unsolved);
+        PlayerPrefs.SetFloat("has_saved", 1);
         
     }
     public void LoadSavedProgress(List<GameObject> little_cubes_list) // sets the position and rotation of all the little cubes to the saved position and rotation
