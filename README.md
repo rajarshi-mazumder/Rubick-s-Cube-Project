@@ -1,7 +1,9 @@
 
 Game Controls-
 
-##Right click hold and drag rotates the whole cube. Left Click hold drag rotates a given side.
+## Right click hold and drag rotates the whole cube. Left Click hold drag rotates a given side.
+
+## Project Documentation link - https://docs.google.com/document/d/1B4ebM5PWHEbm7YoB_6DQJprbdC7cA_TiwG9fhw-2pwY/edit?usp=sharing
 
 Working Principle-
 The rubick’s cube is made up of 27 smaller cubes( referred to as little cubes in the code). Each of these 27 cubes is an instance of a prefab.
