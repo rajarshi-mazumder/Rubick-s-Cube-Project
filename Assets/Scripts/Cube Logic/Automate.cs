@@ -175,7 +175,6 @@ public class Automate : MonoBehaviour
     IEnumerator DelayAfterShuffleEnded() // wait for 1s after shuffle is over. Then saveMove and start the game
     {                                   // this is done to ensure that the move is saved ONLY after the shuffle is over
         yield return new WaitForSeconds(1f);
-        print("Shuffle ended");
         cubeManager.SaveMove();
         GameManager.hasGameStarted = true;
     }

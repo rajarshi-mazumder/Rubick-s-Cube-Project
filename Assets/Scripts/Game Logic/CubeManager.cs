@@ -88,7 +88,6 @@ public class CubeManager : MonoBehaviour
     public void SaveMove() // called everytime the player completes a move
     {
         this.gameObject.GetComponent<SaveScript>().SaveMove(little_cubes_list);
-        print("save move called: " + undoPositions.Count);
     }
 
     // Undo works by storing the player's moves after every move in the undoPositions and undoRotations list
