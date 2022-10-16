@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     CubeManager cubeManager;
     GameObject cubeParent;
 
+    bool hasGameFinished = false;
     public static bool hasGameStarted = false; // player cannot interact with the game when this is false
     bool delayCheck = false; // to introduce delay after starting or resuming game before doing state checks
 
@@ -92,7 +93,7 @@ public class GameManager : MonoBehaviour
     void LateUpdate()
     {   
         // wait and then check if the cube is solved
-        if (delayCheck && cubeManager.cur_state == CubeManager.States.Solved) 
+        if (!hasGameFinished && delayCheck && cubeManager.cur_state == CubeManager.States.Solved) 
             FinishGame();
         maxShuffleText.text = "Maximum no of Shuffles: " + MaxShufflesSlider.value;
     }
@@ -183,6 +184,7 @@ public class GameManager : MonoBehaviour
     }
     public void FinishGame()
     {
+        hasGameFinished = true;
         mainCamera.GetComponent<CinemachineBrain>().enabled = true;
         hasGameStarted = false;
         camAnimationContainer.SetActive(true);
@@ -202,6 +204,7 @@ public class GameManager : MonoBehaviour
     public void CloseCongratulatePlayerDialog()
     {
         congratulationsContainer.SetActive(false);
+        Debug.Log("Close dialog box");
     }
     IEnumerator ShowCongratulateDialog()
     {
